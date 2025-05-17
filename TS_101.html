@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TROUBLESHOOTING STEPS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button-62 {
+            background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+            border: 0;
+            border-radius: 12px;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+                sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 2.5;
+            outline: transparent;
+            padding: 0 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: box-shadow 0.2s ease-in-out;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            margin: 10px;
+            width: 320px;
+            box-sizing: border-box;
+        }
+
+        .button-62:not([disabled]):focus,
+        .button-62:not([disabled]):hover {
+            box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+                -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+                0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+        }
+
+        .substeps {
+            display: none;
+            text-align: left;
+            margin: 10px auto 20px;
+            max-width: 600px;
+            background: #f7f1f1;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .substep {
+            background: #FF9A5A;
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .substep:hover {
+            background: #EF4765;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+<html lang="en">
+<head>
+ <a href="/" title="Home">
+  <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home" class="home-logo" />
+</a>
+
+<style>
+  .home-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Glow effect on hover */
+  .home-logo:hover {
+    box-shadow: 0 0 8px 3px rgba(255, 165, 0, 0.7); /* light orange glow */
+  }
+</style>
+</head>
+<body>
+
+  <!-- Home logo (replace the src with your logo image) -->
+  <a href="/" title="Home">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home" class="home-logo" />
+  </a>
+
+    <h1>TROUBLESHOOTING STEPS</h1>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Please try Power Drain:\n\nThis would discharge if any static electricity is trapped inside the system, which may cause the unit not to function properly.\n\n1. Shut down the unit.\n2. Disconnect all external devices (including the power adapter).\n3. Press and hold the Power button for 15-20 seconds.\n\nAfter 2-3 minutes, power on the unit and check.`)">
+        1. Power Drain
+    </button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Please try BIOS recovery:\n\n1. Switch off the system (make sure the unit is plugged into the AC adaptor).\n2. Press and hold the Windows + B keys, then press the power button.\n3. Keep holding Windows + B but release the power button after 2–3 seconds.\nYou might hear beeps.`)">
+        2. BIOS Recovery
+    </button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Please try CMOS reset:\n\n1. Switch off the system.\n2. Press and hold the Windows + V keys, then press and hold the power button.\n3. When the CMOS reset screen displays or you hear beeps, release the keys.\n4. Press Enter to restart.`)">
+        3. CMOS Reset
+    </button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Find Serial Number & Product Number:\n\nUse keyboard shortcut 'Fn + Esc'.\nIf that doesn’t work, check barcode stickers (may be behind battery).\nVideo: https://www.youtube.com/watch?v=_N8BfdCvMRg\nLink: https://support.hp.com/in-en/document/ish_2039298-1862169-16`)">
+        4. Find Serial Number
+    </button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Steps to Boot into BIOS:\n\n1. Unit should be shut down.\n2. Press power, then tap 'Esc' repeatedly.\n3. In the Boot Menu, press F10 to enter BIOS.`)">
+        5. Boot into BIOS
+    </button>
+
+    <button class="button-62" onclick="toggleDropdown('uefiComponent')">6. UEFI COMPONENT</button>
+    <div id="uefiComponent" class="substeps">
+        <div class="substep"
+            onclick="copyToClipboard(`System Board Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > System Board > Quick Test.`)">
+            6.1 System Board</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Wireless Module Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Wireless Module > Quick Test.`)">
+            6.2 Wireless Module</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Battery Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Power > Battery > Quick Test.`)">
+            6.3 Battery</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Adapter Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Power > Adapter > Quick Test.`)">
+            6.4 Adapter</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Speaker Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Audio > Quick Test.`)">
+            6.5 Speaker</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Microphone Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Microphone > Quick Test.`)">
+            6.6 Microphone</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Touchpad Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Touchpad > Quick Test.`)">
+            6.7 Touchpad</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Keyboard Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Keyboard > Quick Test.`)">
+            6.8 Keyboard</div>
+        <div class="substep"
+            onclick="copyToClipboard(`SSD/HDD Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Storage > SSD > Quick Test.`)">
+            6.9 SSD/HDD</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Port Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Port > Quick Test.`)">
+            6.10 Port</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Webcam Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Webcam > Quick Test.`)">
+            6.11 Webcam</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Fan Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Fan > Quick Test.`)">
+            6.12 Fan</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Fingerprint Test:\n1. Shutdown unit.\n2. Power on, press 'Esc' repeatedly.\n3. In Boot Menu, press F2 for UEFI.\n4. Select COMPONENT TEST > Fingerprint > Quick Test.`)">
+            6.13 Fingerprint</div>
+    </div>
+
+    <button class="button-62" onclick="toggleDropdown('deviceManager')">7. DEVICE MANAGER</button>
+    <div id="deviceManager" class="substeps">
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Batteries:\n1. Open Device Manager.\n2. Expand Batteries.\n3. Right-click each device under Batteries and uninstall.\n4. Restart PC.`)">
+            7.1 Batteries</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Speaker:\n1. Open Device Manager.\n2. Expand Audio inputs and outputs.\n3. Right-click Speaker and uninstall.\n4. Restart PC.`)">
+            7.2 Speaker</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Microphone:\n1. Open Device Manager.\n2. Expand Audio inputs and outputs.\n3. Right-click Microphone and uninstall.\n4. Restart PC.`)">
+            7.3 Microphone</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Fingerprint:\n1. Open Device Manager.\n2. Expand Biometric devices.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.4 Fingerprint</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Bluetooth:\n1. Open Device Manager.\n2. Expand Bluetooth.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.5 Bluetooth</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Camera:\n1. Open Device Manager.\n2. Expand Camera.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.6 Camera</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Display Drivers:\n1. Open Device Manager.\n2. Expand Display adapters.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.7 Graphic Drivers - Display</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Keyboard:\n1. Open Device Manager.\n2. Expand Keyboards.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.8 Keyboard</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Touchpad:\n1. Open Device Manager.\n2. Expand Mice and other pointing devices.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.9 Touchpad</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Device Manager Wi-Fi:\n1. Open Device Manager.\n2. Expand Network adapters.\n3. Right-click driver and uninstall.\n4. Restart PC.`)">
+            7.10 WI-FI</div>
+    </div>
+
+    <button class="button-62" onclick="toggleDropdown('windowsReset')">10. Windows reset</button>
+    <div id="windowsReset" class="substeps">
+        <div class="substep"
+            onclick="copyToClipboard(`Windows Reset from Settings:\n1. Search Reset this PC.\n2. Click Reset PC.\n3. Select Keep my files.\n4. Follow the prompts.`)">
+            10.1 Reset from Settings</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Windows Reset from BIOS:\n1. Shutdown computer.\n2. Power on and tap ESC, then F11.\n3. Choose Troubleshoot > Reset PC.\n4. Select Remove everything.\n5. Follow prompts.`)">
+            10.2 Reset from BIOS</div>
+    </div>
+
+    <button class="button-62" onclick="toggleDropdown('osReinstallation')">11. OS Re-installation</button>
+    <div id="osReinstallation" class="substeps">
+        <div class="substep"
+            onclick="copyToClipboard(`Requirements:\n- 16 GB pen drive.\n- Working computer.\n- Backup your data before proceeding.`)">
+            11.1 Requirements</div>
+        <div class="substep"
+            onclick="copyToClipboard(`Steps for OS Re-installation using Media Creation Tool:\n- Download tool from https://www.microsoft.com/en-in/software-download/windows10\n- Run tool and create USB installation media.\n- Boot target computer from USB.\n- Follow on-screen instructions for recovery.`)">
+            11.2 Media Creation Tool</div>
+        <div class="substep"
+            onclick="copyToClipboard(`OS Re-installation using HP Cloud Recovery Client:\n- Download client from https://ftp.hp.com/pub/softpaq/sp156001-156500/sp156169.exe\n- Follow instructions to reimage unit.`)">
+            11.3 HP Recovery Tool</div>
+    </div>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Open HP Support Assistant:\n- Press Windows, type HP Support Assistant, open app.\n- On Dashboard, check for updates.\n- Install available updates.\n- Restart if prompted.`)">8. HPSA updates</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Open Windows Update:\n- Go to Settings > Update & Security > Windows Update.\n- Check for updates and install all.\n- Restart if prompted.`)">9. Windows updates</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Battery calibration:\nRefer to https://www.youtube.com/watch?v=OBJxM5HQFs0 for steps.`)">13. Battery calibration</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Steps to extract IDR logs:\nDownload from https://ftp.hp.com/pub/idr/ImageDiags4/ImageDiags.exe`)">14. IDR LOGS</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`HP support website:\n- Open https://support.hp.com/gb-en\n- Enter serial number to find drivers.\n- Download and install latest drivers.\n- Restart PC.`)">15. HP support page</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Generate battery health report:\n- Open command prompt as admin.\n- Run: powercfg /batteryreport\n- Report saved at C:\\WINDOWS\\system32\\battery-report.html`)">16. Battery health report</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Get recovery key:\n- Open https://aka.ms/myrecoverykey\n- Login with registered email.\n- Note 48-digit recovery key.\n- Enter key when prompted.\n- Restart if needed.`)">17. Recovery Key</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Safe Mode:\n1. Press Win + I to open Settings.\n2. Go to System > Recovery.\n3. Under Advanced Startup, click Restart now.\n4. Choose Troubleshoot > Advanced options > Startup Settings > Restart.\n5. Press 4 for Safe Mode or 5 for Safe Mode with Networking.`)">18. Safe Mode</button>
+
+    <button class="button-62"
+        onclick="copyToClipboard(`Safe Mode1:\n1. Press Win + I to open Settings.\n2. Go to System > Recovery.\n3. Under Advanced Startup, click Restart now.\n4. Choose Troubleshoot > Advanced options > Startup Settings > Restart.\n5. Press 4 for Safe Mode or 5 for Safe Mode with Networking.`)">18. Safe Mode</button>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Steps copied to clipboard!");
+            }).catch(err => {
+                console.error("Could not copy text:", err);
+            });
+        }
+
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>
